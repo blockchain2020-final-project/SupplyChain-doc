@@ -1352,7 +1352,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/core_companies/:addr/transactions",
+    "url": "/core_companies/transactions",
     "title": "发起一笔交易",
     "group": "CoreCompany",
     "parameter": {
@@ -1399,7 +1399,7 @@ define({ "api": [
     "version": "0.0.0",
     "filename": "src/controllers/core_company.js",
     "groupTitle": "CoreCompany",
-    "name": "PostCore_companiesAddrTransactions"
+    "name": "PostCore_companiesTransactions"
   },
   {
     "type": "patch",
