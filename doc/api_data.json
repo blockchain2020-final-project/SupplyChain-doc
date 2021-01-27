@@ -1276,14 +1276,14 @@
             "type": "Number",
             "optional": false,
             "field": "data.curAmount",
-            "description": ""
+            "description": "<p>还了多少钱</p>"
           },
           {
             "group": "Success 200",
             "type": "Number",
             "optional": false,
             "field": "data.oriAmount",
-            "description": ""
+            "description": "<p>总共要换多少钱</p>"
           },
           {
             "group": "Success 200",
@@ -1303,14 +1303,14 @@
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "bankSignature",
+            "field": "data.bankSignature",
             "description": ""
           },
           {
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "coreCompanySignature",
+            "field": "data.coreCompanySignature",
             "description": ""
           }
         ]
