@@ -432,6 +432,106 @@
     "name": "GetBanksAddr"
   },
   {
+    "type": "get",
+    "url": "/banks/finances",
+    "title": "银行获取全部贷款请求",
+    "group": "Bank",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>贷款</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.id",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.payeeAddr",
+            "description": "<p>修改字段</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.payerAddr",
+            "description": "<p>修改字段</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.amount",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.createTime",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.tMode",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.oriReceiptId",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.requestStatus",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.info",
+            "description": "<p>新增字段</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.isFinance",
+            "description": "<p>新增字段，判断是否为贷款</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "code",
+            "description": "<p>状态码 200是成功</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "src/controllers/bank.js",
+    "groupTitle": "Bank",
+    "name": "GetBanksFinances"
+  },
+  {
     "type": "post",
     "url": "/banks/sendcredit",
     "title": "银行发送信用点给核心企业",
@@ -893,6 +993,106 @@
   },
   {
     "type": "get",
+    "url": "/companies/:addr/finances",
+    "title": "获取某个普通企业的全部贷款",
+    "group": "Company",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "data",
+            "description": "<p>贷款</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.id",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.payeeAddr",
+            "description": "<p>修改字段</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.payerAddr",
+            "description": "<p>修改字段</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.amount",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.createTime",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.tMode",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.oriReceiptId",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.requestStatus",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.info",
+            "description": "<p>新增字段</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.isFinance",
+            "description": "<p>新增字段，判断是否为贷款</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "code",
+            "description": "<p>状态码 200是成功</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "src/controllers/company.js",
+    "groupTitle": "Company",
+    "name": "GetCompaniesAddrFinances"
+  },
+  {
+    "type": "get",
     "url": "/companies/:addr/receipts",
     "title": "获取某个普通企业为收款方的未还清的交易账单",
     "group": "Company",
@@ -1107,7 +1307,58 @@
   },
   {
     "type": "post",
-    "url": "/core_companies/transactions_new",
+    "url": "/companies/finances",
+    "title": "发起贷款请求",
+    "group": "Company",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "payeeAddr",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "amount",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "deadline",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "oriReceiptId",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "info",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "src/controllers/company.js",
+    "groupTitle": "Company",
+    "name": "PostCompaniesFinances"
+  },
+  {
+    "type": "post",
+    "url": "/companies/transactions_new",
     "title": "发起一笔交易, 创建新的应收款账单",
     "group": "Company",
     "parameter": {
@@ -1147,11 +1398,11 @@
     "version": "0.0.0",
     "filename": "src/controllers/company.js",
     "groupTitle": "Company",
-    "name": "PostCore_companiesTransactions_new"
+    "name": "PostCompaniesTransactions_new"
   },
   {
     "type": "post",
-    "url": "/core_companies/transactions_old",
+    "url": "/companies/transactions_old",
     "title": "发起一笔交易，使用已有的应收账款单",
     "group": "Company",
     "parameter": {
@@ -1198,7 +1449,7 @@
     "version": "0.0.0",
     "filename": "src/controllers/company.js",
     "groupTitle": "Company",
-    "name": "PostCore_companiesTransactions_old"
+    "name": "PostCompaniesTransactions_old"
   },
   {
     "type": "post",
@@ -1584,21 +1835,21 @@
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "data.debtorAddr",
+            "field": "data.payeeAddr",
             "description": ""
           },
           {
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "data.debteeAddr",
+            "field": "data.payerAddr",
             "description": ""
           },
           {
             "group": "Success 200",
             "type": "Number",
             "optional": false,
-            "field": "data.curAmount",
+            "field": "data.paidAmount",
             "description": "<p>还了多少钱</p>"
           },
           {
@@ -1624,6 +1875,13 @@
           },
           {
             "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.receiptStatus",
+            "description": "<p>0 为还没还清；1为已经还清</p>"
+          },
+          {
+            "group": "Success 200",
             "type": "String",
             "optional": false,
             "field": "data.bankSignature",
@@ -1634,6 +1892,20 @@
             "type": "String",
             "optional": false,
             "field": "data.coreCompanySignature",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data.info",
+            "description": ""
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "data.isFinance",
             "description": ""
           }
         ]
