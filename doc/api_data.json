@@ -37,10 +37,10 @@
           },
           {
             "group": "Success 200",
-            "type": "Object[]",
+            "type": "String",
             "optional": false,
             "field": "data",
-            "description": ""
+            "description": "<p>用户的类型</p>"
           }
         ]
       }
@@ -1522,13 +1522,6 @@
             "type": "String",
             "optional": false,
             "field": "company_address",
-            "description": ""
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "company_name",
             "description": ""
           }
         ]
