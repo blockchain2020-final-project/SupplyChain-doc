@@ -1,6 +1,6 @@
-# SupplyChain 
-基于区块链的供应链平台
+# SupplyChain 基于区块链的供应链平台
 
+### 小组成员
 | 专业             | 学号     | 姓名   | 分工     |
 | ---------------- | -------- | ------ | -------- |
 | 软件工程         | 18342001 | 白家栋 | 后端实现 |
@@ -16,10 +16,12 @@ https://github.com/blockchain2020-final-project/SupplyChain-frontend
 
 ### 后端
 https://github.com/blockchain2020-final-project/SupplyChain-backend
+
 使用了轻量级的 koa2 框架，同时基于 fisco-bcos 官方提供的 nodejs-sdk，实现了与链端的高效适配和调用，以及和前端的沟通。
 
 ### 链端
 https://github.com/blockchain2020-final-project/SupplyChain-contract
+
 主要功能：
 - 角色认证
 - 管理员宏观调控系统总借贷
