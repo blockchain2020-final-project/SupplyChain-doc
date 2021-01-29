@@ -34,9 +34,12 @@ https://github.com/blockchain2020-final-project/SupplyChain-contract
 
 ### 文档与演示视频
 文档仓库：https://github.com/blockchain2020-final-project/SupplyChain-doc
+
 - api-doc 为后端api文档文件夹
 - report 为实验报告文件夹
+
 实验报告：https://github.com/blockchain2020-final-project/SupplyChain-doc/blob/master/report/report.pdf
+
 演示视频：
 
 
