@@ -254,6 +254,26 @@ tf.createTable(
 
 ## 功能实现
 
+### 开发环境
+
+#### 前端
+
+- 语言: Vue 2.x
+- 框架: @vue/cli 4.5.11
+- 界面库: ant-design-vue
+- 网络请求组件: nodejs-axios
+
+#### 后端
+
+使用了轻量级的 koa2 框架，同时基于 fisco-bcos 官方提供的 nodejs-sdk，实现了与链端的高效适配和调用，以及和前端的沟通。
+
+#### 链端
+
+- 语言：Solidity
+- 使用FISCO-BCOS部署联盟平台，搭建webase-front平台开发
+
+
+
 设计了以下事件：
 
 ```c#
