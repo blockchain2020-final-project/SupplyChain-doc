@@ -40,7 +40,7 @@ https://github.com/blockchain2020-final-project/SupplyChain-contract
 
 实验报告：https://github.com/blockchain2020-final-project/SupplyChain-doc/blob/master/report/report.pdf
 
-演示视频：
+演示视频：https://github.com/blockchain2020-final-project/SupplyChain-doc/blob/master/%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91.mp4
 
 
 
